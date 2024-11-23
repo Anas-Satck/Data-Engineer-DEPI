@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataFrames</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding-left: 250px;
+
+}
+
+h1, h2 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #da9494;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #de97ca;
+}
+
+</style>
+<body>
+    <h1>DataFrames Display</h1>
+
+    <h2>Loan Data</h2>
+    <div style="font-size: x-small;">{{ loan | safe }}</div>
+
+    <h2>Customers</h2>
+    <div>{{ customers | safe }}</div>
+
+    <h2>Orders</h2>
+    <div>{{ orders | safe }}</div>
+
+    <h2>Order Items</h2>
+    <div>{{ order_items | safe }}</div>
+
+    <h2>Products</h2>
+    <div>{{ products | safe }}</div>
+
+    <h2>Suppliers</h2>
+    <div>{{ suppliers | safe }}</div>
+
+    <a href="{{ url_for('main.home') }}">Back to Home</a>
+</body>
+</html> 
+
